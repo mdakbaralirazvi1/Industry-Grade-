@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: abc-tech-deployment
+  name: xyz-tech-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: abc-tech
+      app: xyz-tech
   template:
     metadata:
       labels:
-        app: abc-tech
+        app: xyz-tech
     spec:
       containers:
-        - name: abc-tech-container
-          image: mdakbarali/abc_tech:latest
+        - name: xyz-tech-container
+          image: mdakbarali/xyz_tech:latest
           ports:
             - containerPort: 8084
 
@@ -22,10 +22,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: abc-tech-service
+  name: xyz-tech-service
 spec:
   selector:
-    app: abc-tech
+    app: xyz-tech
   ports:
     - protocol: TCP
       port: 8084          # This is the port exposed by the service
