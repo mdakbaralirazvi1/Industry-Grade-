@@ -2,7 +2,7 @@
 FROM tomcat:10.1.30
 
 # Copy the WAR file to the webapps directory in Tomcat
-COPY abc_tech.war /usr/local/tomcat/webapps/
+COPY xyz_tech.war /usr/local/tomcat/webapps/
 
 # Update server.xml to change the port from 8080 to 8084
 RUN sed -i 's/port="8080"/port="8084"/g' /usr/local/tomcat/conf/server.xml
