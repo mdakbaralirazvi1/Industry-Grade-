@@ -12,6 +12,8 @@ spec:
       labels:
         app: xyz-tech
     spec:
+      imagePullSecrets:
+        - name: myregistrykey
       containers:
         - name: xyz-tech-container
           image: mdakbarali/xyz_tech:latest
